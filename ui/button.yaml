@@ -1,0 +1,33 @@
+div:
+  - div: 
+    - b: $text
+    class: centered
+    id: ui-button
+    href: ""
+    anchors:
+      - bind: $anchorName
+        trigger: onclick
+        target: $target
+  - style:
+    - "#ui-button":
+      - position: relative
+      - margin: 10px
+      - width: 80%
+      - text-align: center
+      - color: black
+      - padding: 15px
+      - font-size: 20px
+      - border-radius: 10px
+      - background: linear-gradient(54deg, rgba(101,255,150,1) 0%, rgba(50,222,132,1) 45%, rgba(0,255, 157,1) 100%)
+      - -webkit-touch-callout: none; 
+      - -webkit-user-select: none; 
+      - -khtml-user-select: none; 
+      - -moz-user-select: none; 
+      - -ms-user-select: none; 
+      - user-select: none; 
+    - "@media only screen and (orientation: portrait) and (max-width: 2000px)":
+      - "#ui-button":
+        - font-size: 50px
+        - width: 80%
+        - margin-left: 5px
+        - margin-right: 5px
