@@ -1,5 +1,5 @@
 # songGuesser
-Fun little local multiplayer game about guessing songs; made using yacht
+Fun little local multiplayer game about guessing songs; made using [yacht](https://github.com/Pobulus/yacht)
 
 ## Prerequisites
 > this project has so far only been tested on Linux
