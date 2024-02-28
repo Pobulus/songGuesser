@@ -1,0 +1,38 @@
+html:
+  - head:
+    - style: style.yass
+    - title: &title Reveal!
+  - body:
+    - script: anchors.js
+    - div:
+      - b: *title
+        id: title
+        style: font-size:50px
+        class: gradient
+        anchors:
+          - bind: game/getSongName
+            trigger: once
+            target: innerHTML
+           
+          
+      - b:
+        anchors:
+          - bind: game/getResult
+            trigger: once
+            target: innerHTML
+        id: result
+
+      - tug: ui/button.yaml
+        text: Next song!
+        target: redirect
+        anchorName: game/signalReady
+
+      
+      - table:
+        style: color:white;font-size:20px;position:relative;text-align:center
+        
+        anchors:
+          - bind: game/getResultsTable
+            trigger: once
+            target: innerHTML
+      class: centered

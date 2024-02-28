@@ -1,0 +1,26 @@
+html:
+  - head:
+    - title: Guessing
+    - style: style.yass
+    - meta:
+      content: text/html;charset=utf-8
+      http-equiv: Content-Type
+  - body:
+      - script: anchors.js
+      - div:
+        - b: What's this song?🎵
+          id: title
+          style: font-size:30px;text-align:center
+          class: gradient
+        
+        - tug: ui/textInput.yaml
+          placeholder: Guess now...
+          anchorName: game/setGuess
+        
+        - tug: ui/button.yaml
+          text: Send 🚀
+          anchorName: game/submitGuess
+          target: redirect
+
+        class: centered 
+      

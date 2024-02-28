@@ -1,0 +1,31 @@
+html:
+  - head:
+    - style: style.yass
+    - title: &title Song&nbsp;guesser!
+  - body:
+    - script: anchors.js
+    - div:
+      - b: *title
+        id: title
+        class: gradient
+      
+      - tug: ui/textInput.yaml
+        placeholder: "Enter you name..."
+        anchorName: game/newPlayer
+
+      - tug: ui/button.yaml
+        text: I'm ready!
+        target: href
+        anchorName: game/signalReady
+
+      
+      - ul:
+        style: color:white;font-size:20px;position:relative;text-align:center
+        
+        anchors:
+          - bind: game/getPlayers
+            trigger: always
+            target: innerHTML
+      class: centered
+
+    

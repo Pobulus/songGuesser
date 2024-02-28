@@ -1,0 +1,25 @@
+html:
+  - head:
+    - style: style.yass
+    - title: &title Spectating
+  - body:
+    - script: anchors.js
+    - div:
+      - b: *title
+        id: title
+        style: font-size:50px
+        class: gradient
+        anchors:
+          - bind: game/getSongName
+            trigger: once
+            target: innerHTML
+            trigger: always
+     
+      - table:
+        style: color:white;font-size:20px;position:relative;text-align:center 
+        anchors:
+          - bind: game/getResultsTable
+            trigger: once
+            trigger: always
+            target: innerHTML
+      class: centered

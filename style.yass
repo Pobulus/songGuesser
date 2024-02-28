@@ -1,0 +1,70 @@
+style:
+  - "@keyframes wiggle": 
+    - 0%: 
+        - transform: translate(-50%) rotate(-12deg) 
+    - 50%: 
+        - transform:  translate(-50%) rotate(12deg)
+    - 100%: 
+        - transform:  translate(-50%) rotate(-12deg) 
+
+  - a:
+    - text-decoration: none
+  - body:
+      - background: rgb(10,10,25)
+      - font-family: monospace
+  - .gradient:
+      - background-color: rgb(117,0,186)
+      - background: linear-gradient(54deg, rgba(101,255,150,1) 0%, rgba(50,222,132,1) 45%, rgba(0,255, 157,1) 100%)
+      - -webkit-background-clip: text
+      - -webkit-text-fill-color: transparent
+      - color: transparent
+#   - 'centered:hover':
+#       - filter: hue-rotate(120deg)
+#       - transition: filter 1s
+  - .text-input:
+      - position: relative
+      - width: 80%
+      - position: relative
+      - margin: 5px 
+      - font-size: 25px
+      - left: 50%
+      - top: 50%
+      - transform: translate(-50%, -50%)
+  - .centered:
+      - grid-template-columns: 1fr
+      - grid-auto-flow: row dense
+      - display: grid
+      - grid-row-gap: 0px
+      - position: absolute
+      - left: 50%
+      - top: 50%
+      - transform: translate(-50%, -50%)
+      - filter: hue-rotate(-30deg)
+      - transition: filter 2.5s
+  - "#title":
+      - font-size: 100px
+      - text-align: center
+  - "#result":
+      - color: white
+      - font-size: 25px
+      - text-align: center
+      - margin: 5px
+  - ul:
+    - list-style-type: none
+  - li:
+    - font-size: 40px
+  - "#subtitle":
+      - font-size: 22px
+      - text-align: center
+      - transform: rotate(-12deg) 
+      - animation-name: wiggle
+      - animation-duration: 4s
+      - animation-iteration-count: infinite
+  - "@media only screen and (orientation: portrait) and (max-width: 2000px)":
+        - "#title":
+          - font-size: 100px
+        - .text-input:
+            - width: 96%
+            - font-size: 50px
+        - "#subtitle":
+          - font-size: 10px
