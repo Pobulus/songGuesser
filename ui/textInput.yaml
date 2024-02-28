@@ -1,0 +1,17 @@
+div:
+  - input:
+    class: text-input
+    id: tInp
+    placeholder: $placeholder
+    type: text
+    anchors:
+      - bind: $anchorName
+        trigger: onchange
+  - style:
+    - '#tInp':
+      - margin: 10px
+      - text-align: center
+      - padding: 5px
+
+      - "@media only orientation:portrait":
+        - width: 100%
