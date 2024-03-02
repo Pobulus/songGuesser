@@ -77,5 +77,11 @@ style:
           - font-size: 40px
         - .centered:
           - width: 96%
+          - grid-row-gap: 40px
         - .results-table:  
           - font-size: 40px
+        - .player-list li:
+          - font-size: 60px
+    
+    
+    

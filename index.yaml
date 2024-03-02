@@ -15,6 +15,7 @@ html:
       - tug: ui/textInput.yaml
         placeholder: "Enter you name..."
         change: game/newPlayer
+        initial: game/getPlayername
 
       - tug: ui/button.yaml
         text: I'm ready!

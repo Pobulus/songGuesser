@@ -10,7 +10,8 @@ class Game:
         self.players = {}
         self.inProgress = False
         self.service = mp._open_service(mp.get_services(), 0)
-        self.title= "<not started yet>"
+        self.title= "<i>not started yet</i>"
+        self.revealed = False
         print(self.service)
 
     def guess(self):
@@ -89,11 +90,18 @@ def newPlayer(req):
     else:
         return "no name provided"
 
+@anchor
+def getPlayername(req):
+    name = getCookie(req).get("playerName")
+    if name is not None:
+        return name.value
+    return ""
+
 @anchor        
 def getPlayers(req):
     output = ""
     for name in games[uid].players.keys():
-        output += f"\n    <li>{name}</li>"
+        output += f"\n    <li>{name}{'✅' if games[uid].players[name].ready else '⏳'}</li>"
     return output
 
 @anchor
@@ -146,8 +154,14 @@ def getResult(req):
 @anchor
 def getResultsTable(req):
     out = "<tr><th>Player</th><th>Guess</th><th>Score</th>"
-    for player in games[uid].players.values():
-        out += f"\n<tr><td>{player.name}</td>"
-        out += f"<td>{player.guess} {'👍' if player.result else '💀' }</td>"
-        out += f"<td>{str(player.points)}</td></tr>"
+    if games[uid].revealed:
+        for player in games[uid].players.values():
+            out += f"\n<tr><td>{player.name}</td>"
+            out += f"<td>{player.guess} {'👍' if player.result else '💀' }</td>"
+            out += f"<td>{str(player.points)}</td></tr>"
+    else:
+        for player in games[uid].players.values():
+            out += f"\n<tr><td>{player.name}</td>"
+            out += f"<td>{'✉️' if player.guess else '📝' }</td>"
+            out += f"<td>{str(player.points)}</td></tr>"
     return out

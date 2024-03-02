@@ -1,14 +1,45 @@
 div:
-  - div: 
+  - button: 
     - b: $text
-    class: centered 
+    class: centered button-36
     id: ui-button
+    role: button
     href: ""
     anchors:
       - bind: $anchorName
         trigger: onclick
         target: $target
   - style:
+
+    - .button-36:
+      - background: linear-gradient(54deg, rgba(99, 199, 13, 1) 0%, rgba(87, 222, 35, 1) 50%, rgba(13, 199, 65, 1) 100%)
+      
+      - border-style: none;
+      - box-sizing: border-box;
+      - color: white
+      - cursor: pointer;
+      - flex-shrink: 0;
+      
+      - padding: 0 1.6rem;
+      - text-align: center;
+      - text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+      - transition: all .5s;
+      - user-select: none;
+      - -webkit-user-select: none;
+      - touch-action: manipulation;
+
+
+    - .button-36:hover:
+      - box-shadow: rgba(63, 245, 62, 0.5) 0 1px 30px;
+      - transition-duration: .1s;
+
+
+    - '@media (min-width: 768px)':
+      - .button-36:
+        - padding: 0 2.6rem;
+
+
+
     - "#ui-button":
       - position: relative
       - margin: 10px
@@ -18,22 +49,12 @@ div:
       - padding: 15px
       - font-size: 20px
       - border-radius: 10px
-      # - background-color: rgba(14, 102, 14, 1);
-      
-      - background: linear-gradient(54deg, rgba(99, 199, 13, 1) 0%, rgba(87, 222, 35, 1) 50%, rgba(13, 199, 65, 1) 100%)
-      
-      
-      - -webkit-touch-callout: none; 
-      - -webkit-user-select: none; 
-      - -khtml-user-select: none; 
-      - -moz-user-select: none; 
-      - -ms-user-select: none; 
-      - user-select: none; 
-    - "#ui-button:hover":
-      - filter: hue-rotate(-90deg)
+
     - "@media only screen and (orientation: portrait) and (max-width: 2000px)":
       - "#ui-button":
         - font-size: 60px
         - width: 80%
         - margin-left: 5px
         - margin-right: 5px
+
+

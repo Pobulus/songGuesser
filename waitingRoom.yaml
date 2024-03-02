@@ -11,3 +11,9 @@ html:
         - bind: game/checkReady
           target: redirect
           trigger: always
+    - ul:
+      class: player-list 
+      anchors:
+        - bind: game/getPlayers
+          trigger: always
+          target: innerHTML
