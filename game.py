@@ -93,7 +93,7 @@ def newPlayer(req):
 @anchor
 def getPlayername(req):
     name = getCookie(req).get("playerName")
-    if name is not None:
+    if name is not None and name.value in games[uid].players.keys():
         return name.value
     return ""
 
