@@ -7,7 +7,7 @@ html:
     - div:
       - b: *title
         id: title
-        style: font-size:50px
+        
         class: gradient
         anchors:
           - bind: game/getSongName
@@ -29,8 +29,8 @@ html:
 
       
       - table:
-        style: color:white;font-size:20px;position:relative;text-align:center
-        
+        class: results-table
+
         anchors:
           - bind: game/getResultsTable
             trigger: once

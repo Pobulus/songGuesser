@@ -1,7 +1,7 @@
 div:
   - div: 
     - b: $text
-    class: centered
+    class: centered 
     id: ui-button
     href: ""
     anchors:
@@ -18,16 +18,22 @@ div:
       - padding: 15px
       - font-size: 20px
       - border-radius: 10px
-      - background: linear-gradient(54deg, rgba(101,255,150,1) 0%, rgba(50,222,132,1) 45%, rgba(0,255, 157,1) 100%)
+      # - background-color: rgba(14, 102, 14, 1);
+      
+      - background: linear-gradient(54deg, rgba(99, 199, 13, 1) 0%, rgba(87, 222, 35, 1) 50%, rgba(13, 199, 65, 1) 100%)
+      
+      
       - -webkit-touch-callout: none; 
       - -webkit-user-select: none; 
       - -khtml-user-select: none; 
       - -moz-user-select: none; 
       - -ms-user-select: none; 
       - user-select: none; 
+    - "#ui-button:hover":
+      - filter: hue-rotate(-90deg)
     - "@media only screen and (orientation: portrait) and (max-width: 2000px)":
       - "#ui-button":
-        - font-size: 50px
+        - font-size: 60px
         - width: 80%
         - margin-left: 5px
         - margin-right: 5px

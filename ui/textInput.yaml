@@ -5,13 +5,20 @@ div:
     placeholder: $placeholder
     type: text
     anchors:
-      - bind: $anchorName
+      - bind: $change
         trigger: onchange
+      - bind: $submit
+        trigger: onchange
+        target: redirect
+
+
   - style:
     - '#tInp':
-      - margin: 10px
+      - margin-top: 10px
+      - margin-bottom: 10px
       - text-align: center
       - padding: 5px
 
-      - "@media only orientation:portrait":
-        - width: 100%
+    # - '@media only orientation:portrait':
+    #   - '#tInp':
+    #     - width: 100%

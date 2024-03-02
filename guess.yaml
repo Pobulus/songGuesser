@@ -8,14 +8,15 @@ html:
   - body:
       - script: anchors.js
       - div:
-        - b: What's this song?🎵
+        - b: What's&nbsp;this song?🎵
           id: title
-          style: font-size:30px;text-align:center
+
           class: gradient
         
         - tug: ui/textInput.yaml
           placeholder: Guess now...
-          anchorName: game/setGuess
+          change: game/setGuess
+          submit: game/submitGuess
         
         - tug: ui/button.yaml
           text: Send 🚀
@@ -23,4 +24,5 @@ html:
           target: redirect
 
         class: centered 
+        
       

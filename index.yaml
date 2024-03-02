@@ -2,6 +2,9 @@ html:
   - head:
     - style: style.yass
     - title: &title Song&nbsp;guesser!
+    - meta:
+      content: text/html;charset=utf-8
+      http-equiv: Content-Type
   - body:
     - script: anchors.js
     - div:
@@ -11,17 +14,15 @@ html:
       
       - tug: ui/textInput.yaml
         placeholder: "Enter you name..."
-        anchorName: game/newPlayer
+        change: game/newPlayer
 
       - tug: ui/button.yaml
         text: I'm ready!
         target: href
         anchorName: game/signalReady
 
-      
       - ul:
-        style: color:white;font-size:20px;position:relative;text-align:center
-        
+        class: player-list
         anchors:
           - bind: game/getPlayers
             trigger: always

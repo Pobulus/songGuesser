@@ -14,7 +14,7 @@ style:
       - font-family: monospace
   - .gradient:
       - background-color: rgb(117,0,186)
-      - background: linear-gradient(54deg, rgba(101,255,150,1) 0%, rgba(50,222,132,1) 45%, rgba(0,255, 157,1) 100%)
+      - background: linear-gradient(54deg, rgba(99, 199, 13, 1) 0%, rgba(87, 222, 35, 1) 50%, rgba(13, 199, 65, 1) 100%)
       - -webkit-background-clip: text
       - -webkit-text-fill-color: transparent
       - color: transparent
@@ -34,21 +34,32 @@ style:
       - grid-template-columns: 1fr
       - grid-auto-flow: row dense
       - display: grid
-      - grid-row-gap: 0px
+      - grid-row-gap: 10px
       - position: absolute
       - left: 50%
       - top: 50%
       - transform: translate(-50%, -50%)
-      - filter: hue-rotate(-30deg)
-      - transition: filter 2.5s
+      - filter: hue-rotate(0deg)
+      - transition: filter 1s
   - "#title":
-      - font-size: 100px
+      - font-size: 80px
       - text-align: center
   - "#result":
       - color: white
-      - font-size: 25px
+      - font-size: 40px
       - text-align: center
       - margin: 5px
+  - .player-list li:
+    - color: white
+    - font-size: 40px
+    - position: relative
+    - text-align: center
+    - margin: 25px
+  - .results-table:
+    - color: white
+    - font-size: 20px
+    - position: relative
+    - text-align: center
   - ul:
     - list-style-type: none
   - li:
@@ -64,7 +75,11 @@ style:
         - "#title":
           - font-size: 100px
         - .text-input:
-            - width: 96%
-            - font-size: 50px
+            # - width: 96%
+            - font-size: 60px
         - "#subtitle":
-          - font-size: 10px
+          - font-size: 40px
+        - .centered:
+          - width: 96%
+        - .results-table:  
+          - font-size: 40px
