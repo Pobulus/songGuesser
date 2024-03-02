@@ -18,9 +18,6 @@ style:
       - -webkit-background-clip: text
       - -webkit-text-fill-color: transparent
       - color: transparent
-#   - 'centered:hover':
-#       - filter: hue-rotate(120deg)
-#       - transition: filter 1s
   - .text-input:
       - position: relative
       - width: 80%
@@ -75,8 +72,7 @@ style:
         - "#title":
           - font-size: 100px
         - .text-input:
-            # - width: 96%
-            - font-size: 60px
+          - font-size: 60px
         - "#subtitle":
           - font-size: 40px
         - .centered:
